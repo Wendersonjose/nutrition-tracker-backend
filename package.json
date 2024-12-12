@@ -1,0 +1,20 @@
+{
+  "name": "nutrition-tracker-backend",
+  "version": "1.0.0",
+  "description": "API para rastrear a ingestão de alimentos",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "18.x"
+  },
+  "author": "",
+  "license": "ISC"
+}

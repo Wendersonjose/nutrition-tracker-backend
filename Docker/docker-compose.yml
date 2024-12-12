@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+    ports:
+      - "5000:5000"  # Mapeando a porta 5000 do contêiner para a porta 5000 do host
+    volumes:
+      - ./:/usr/src/app  # Mapeando o diretório atual para dentro do contêiner
+    environment:
+      - NODE_ENV=development
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"  # Mapeando a porta do PostgreSQL
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: nutritiondb
